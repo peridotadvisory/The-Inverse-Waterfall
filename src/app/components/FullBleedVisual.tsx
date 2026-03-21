@@ -1,7 +1,7 @@
 import systemArchitectureImg from '@/assets/visuals/EVF_System_Architecture_Stack.png';
 import enduringSystemImg from '@/assets/visuals/EVF_Enduring_System_Model.png';
 import systemVsSingleEngineImg from '@/assets/visuals/EVF_System_vs_Single_Engine.png';
-
+ 
 export function FullBleedVisual() {
   return (
     <section className="w-full bg-[#0B0B0C] py-24 md:py-32">
