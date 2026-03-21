@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { useEffect, useState } from 'react';
+import heroBg from '@/assets/inverse-waterfall-bg.svg';
 
 export function HeroCover() {
   const [scrollY, setScrollY] = useState(0);
@@ -19,60 +20,37 @@ export function HeroCover() {
       transition={{ duration: 1.5 }}
       className="relative h-screen flex items-start justify-start overflow-hidden"
       style={{
-        background: 'linear-gradient(180deg, #0B0B0C 0%, #1C3D2B 100%)',
-        paddingTop: '35vh',
+        background: '#0B0B0C',
+        paddingTop: '30vh',
         paddingLeft: 'clamp(2rem, 8vw, 8rem)',
         paddingRight: 'clamp(2rem, 8vw, 8rem)',
       }}
     >
-      {/* Animated gradient background */}
       <div
-        className="absolute inset-0 opacity-20"
+        className="absolute inset-0"
         style={{
-          background: `radial-gradient(circle at 30% ${50 + scrollY * 0.05}%, rgba(28, 61, 43, 0.4) 0%, transparent 70%)`,
+          backgroundImage: `url(${heroBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          opacity: 0.92,
         }}
       />
 
-      {/* Upward flowing lines */}
-      <div className="absolute inset-0 overflow-hidden opacity-40">
-        {[...Array(15)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-px"
-            style={{
-              left: `${8 + i * 6}%`,
-              height: '120vh',
-              background: 'linear-gradient(to top, transparent, rgba(168, 168, 168, 0.15), transparent)',
-              transform: `translateY(${scrollY * 0.3}px)`,
-            }}
-            animate={{
-              y: [0, -150, 0],
-            }}
-            transition={{
-              duration: 20 + i * 2,
-              repeat: Infinity,
-              ease: 'linear',
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Content */}
       <motion.div
         initial={{ y: 30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.5, duration: 1.2 }}
         className="relative z-10 max-w-6xl"
-        style={{ transform: `translateY(${scrollY * -0.2}px)` }}
       >
         <motion.h1
           className="mb-8"
           style={{
             fontFamily: "'Playfair Display', serif",
-            fontSize: 'clamp(3.5rem, 9vw, 8rem)',
+            fontSize: 'clamp(3.8rem, 9.5vw, 8.8rem)',
             fontWeight: 400,
-            letterSpacing: '-0.03em',
-            lineHeight: 0.95,
+            letterSpacing: '-0.035em',
+            lineHeight: 0.92,
             color: '#F5F5F3',
           }}
         >
@@ -112,7 +90,7 @@ export function HeroCover() {
             letterSpacing: '0.01em',
             lineHeight: 1.6,
             color: '#A8A8A8',
-            opacity: 0.7,
+            opacity: 0.68,
           }}
         >
           An inverse waterfall of capital
@@ -136,7 +114,6 @@ export function HeroCover() {
         </motion.div>
       </motion.div>
 
-      {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
