@@ -14,7 +14,7 @@ export function SectionBlock({ title, children, background = '#F5F5F3' }: Sectio
   return (
     <section
       ref={ref}
-      className="py-32 px-8"
+      className="py-48 px-8"
       style={{ background }}
     >
       <motion.div
@@ -24,13 +24,13 @@ export function SectionBlock({ title, children, background = '#F5F5F3' }: Sectio
         className="max-w-3xl mx-auto"
       >
         <h2
-          className="mb-16"
+          className="mb-20"
           style={{
             fontFamily: "'Playfair Display', serif",
-            fontSize: 'clamp(1.5rem, 4vw, 2.5rem)',
+            fontSize: 'clamp(1.75rem, 4.5vw, 3rem)',
             fontWeight: 400,
-            letterSpacing: '-0.01em',
-            lineHeight: 1.3,
+            letterSpacing: '-0.02em',
+            lineHeight: 1.2,
             color: background === '#0B0B0C' ? '#F5F5F3' : '#0B0B0C',
           }}
         >
@@ -42,7 +42,7 @@ export function SectionBlock({ title, children, background = '#F5F5F3' }: Sectio
             fontFamily: "'Inter', sans-serif",
             fontSize: '1.125rem',
             fontWeight: 300,
-            lineHeight: 1.8,
+            lineHeight: 2,
             color: background === '#0B0B0C' ? '#F5F5F3' : '#0B0B0C',
           }}
         >

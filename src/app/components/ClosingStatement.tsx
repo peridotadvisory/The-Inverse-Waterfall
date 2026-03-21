@@ -7,7 +7,7 @@ export function ClosingStatement() {
   return (
     <section
       ref={ref}
-      className="py-40 px-8"
+      className="py-48 px-8"
       style={{ background: '#0B0B0C' }}
     >
       <motion.div
@@ -17,13 +17,13 @@ export function ClosingStatement() {
         className="max-w-3xl mx-auto text-center"
       >
         <h2
-          className="mb-20"
+          className="mb-24"
           style={{
             fontFamily: "'Playfair Display', serif",
-            fontSize: 'clamp(2rem, 5vw, 3.5rem)',
+            fontSize: 'clamp(2.25rem, 5.5vw, 4rem)',
             fontWeight: 400,
-            letterSpacing: '-0.01em',
-            lineHeight: 1.2,
+            letterSpacing: '-0.02em',
+            lineHeight: 1.15,
             color: '#F5F5F3',
           }}
         >
@@ -31,12 +31,12 @@ export function ClosingStatement() {
         </h2>
 
         <div
-          className="space-y-8"
+          className="space-y-10"
           style={{
             fontFamily: "'Inter', sans-serif",
             fontSize: '1.125rem',
             fontWeight: 300,
-            lineHeight: 1.8,
+            lineHeight: 2,
             color: '#A8A8A8',
           }}
         >
@@ -57,18 +57,18 @@ export function ClosingStatement() {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ delay: 0.8, duration: 1 }}
-          className="mt-24 pt-12 border-t border-stone-800"
+          className="mt-32 pt-16 border-t border-stone-800"
           style={{
             fontFamily: "'Inter', sans-serif",
-            fontSize: '0.875rem',
+            fontSize: '0.8rem',
             fontWeight: 400,
-            letterSpacing: '0.1em',
+            letterSpacing: '0.12em',
             textTransform: 'uppercase',
             color: '#A8A8A8',
           }}
         >
           <div className="mb-2">Peridot Advisory</div>
-          <div style={{ opacity: 0.6 }}>Enduring Value Framework</div>
+          <div style={{ opacity: 0.5 }}>Enduring Value Framework</div>
         </motion.div>
       </motion.div>
     </section>
