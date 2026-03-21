@@ -1,6 +1,6 @@
 import laminarTurbulentImg from '@/assets/visuals/EVF_Laminar_vs_Turbulent.png';
 
-export function LaminarTurbulent() {
+export function LaminarTurbulent() { 
   return (
     <section className="w-full bg-[#0B0B0C] py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6 md:px-10">
