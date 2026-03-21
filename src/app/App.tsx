@@ -1,5 +1,5 @@
 import { HeroCover } from './components/HeroCover';
-import { ExecutiveSummary } from './components/ExecutiveSummary';
+import { ExecutiveSummary } from './components/ExecutiveSummary'; 
 import { SectionBlock } from './components/SectionBlock';
 import { DataCallout } from './components/DataCallout';
 import { FullBleedVisual } from './components/FullBleedVisual';
