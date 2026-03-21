@@ -1,4 +1,4 @@
-export function ClosingStatement() {
+export function ClosingStatement() { 
   return (
     <section className="w-full bg-[#0B0B0C] py-24 md:py-32">
       <div className="mx-auto max-w-3xl px-6 text-center md:px-10">
